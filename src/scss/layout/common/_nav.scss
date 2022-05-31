@@ -4,11 +4,22 @@
 
 .nav {
   &__list {
+    display: flex;
+    align-items: center;
   }
 
   &__item {
+    margin-right: 60px;
   }
 
   &__link {
+    padding: 10px 0;
+    transition: $transition ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-text__cyan;
+      }
+    }
   }
 }

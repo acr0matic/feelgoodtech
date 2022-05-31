@@ -1,6 +1,8 @@
 .button {
+  display: flex;
+  align-items: center;
+
   border: none;
-  border-radius: $border-radius--button;
   outline: none;
 
   background-color: transparent;

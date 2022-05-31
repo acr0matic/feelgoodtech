@@ -3,9 +3,22 @@
 // -----------------------------------------------------------------------------
 
 #header {
-
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: $shadow;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  height: $header-height;
 
+  &__logo {
+    margin-left: auto;
+  }
+
+  &__action {
+    margin-left: -15px;
+  }
 }

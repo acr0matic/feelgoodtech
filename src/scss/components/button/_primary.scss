@@ -1,0 +1,37 @@
+.button-primary {
+  position: relative;
+  padding: 7px 15px;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $component-color__blue;
+      color: $color-text__white;
+
+      &::after {
+        background-color: $component-color__blue;
+      }
+
+      .button__arrow path {
+        fill: $color-text__white;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+
+    width: calc(100% - 30px);
+    height: 1px;
+
+    background-color: $palette-black;
+    transform: translateX(-50%);
+    transition: $transition ease;
+  }
+
+  .button__arrow {
+    margin-left: 10px;
+  }
+}

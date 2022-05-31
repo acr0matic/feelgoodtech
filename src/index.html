@@ -41,11 +41,11 @@
   <meta name="robots" content="index,follow" />
 
   <!-- Покраска адресной строки в мобильных Chrome, Firefox OS и Opera -->
-  <meta name="theme-color" content="#4285f4" />
+  <meta name="theme-color" content="#1AB099" />
 
   <!-- Покраска для iOS Safari -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1AB099">
 
   <!-- Место для счетков и аналитики -->
 
@@ -60,7 +60,48 @@
 <body>
   <!-- Шапка -->
   <header id="header">
+    <div class="container">
+      <div class="header">
+        <div class="header__nav">
+          <nav class="nav nav--header">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about">About Us</a>
+              </li>
 
+              <li class="nav__item">
+                <a class="nav__link" href="#service">Services</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.nav -->
+        </div>
+        <!-- /.header__nav -->
+
+        <div class="header__action">
+          <button class="button button-primary">
+            <span class="button__text">Write Us</span>
+            <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
+            </svg>
+          </button>
+        </div>
+        <!-- /.header__action -->
+
+        <div class="header__logo logo">
+          <a href="#">
+            <img class="logo__image logo__image--header" src="img/logo.svg" alt="">
+          </a>
+        </div>
+        <!-- /.header__logo -->
+      </div>
+      <!-- /.header -->
+    </div>
+    <!-- /.container -->
   </header>
 
   <!-- Основной контент -->
