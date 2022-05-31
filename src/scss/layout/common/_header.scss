@@ -4,8 +4,11 @@
 
 #header {
   position: sticky;
+  z-index: $z-index-header;
   top: 0;
   width: 100%;
+
+  background-color: $palette-white;
   box-shadow: $shadow;
 }
 

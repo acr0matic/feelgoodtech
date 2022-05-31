@@ -1,4 +1,6 @@
 .button {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -11,6 +13,24 @@
   cursor: pointer;
 
   transition: all $transition ease;
+
+  &__arrow {
+    margin-left: 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+
+    width: calc(100% - 30px);
+    height: 1px;
+
+    background-color: $palette-black;
+    transform: translateX(-50%);
+    transition: $transition ease;
+  }
 
   &:disabled {
     opacity: 0.5;

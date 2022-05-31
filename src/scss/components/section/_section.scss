@@ -1,4 +1,8 @@
 .section {
+  &:not(:first-child) {
+    margin-top: 180px;
+  }
+
   &__header {
     margin-bottom: 45px;
   }

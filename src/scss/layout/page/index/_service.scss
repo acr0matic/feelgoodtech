@@ -1,0 +1,39 @@
+#service {
+}
+
+.service {
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    height: 205px;
+    padding: 30px 16px;
+
+    background-color: $palette-cyan;
+    color: $color-text__white;
+
+    &--gray {
+      align-items: center;
+      justify-content: center;
+
+      background-color: $palette-gray;
+      color: $color-text__black;
+
+      .service__title {
+        font-weight: $weight-Regular;
+      }
+
+      .service__action {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size__text--largest;
+  }
+
+  &__action {
+    margin-top: auto;
+  }
+}
