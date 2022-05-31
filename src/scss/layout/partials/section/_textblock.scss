@@ -1,5 +1,13 @@
 .textblock {
   &__content {
     font-size: $font-size__text--large;
+
+    &:not(:last-child) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__action {
+    margin-top: auto;
   }
 }
