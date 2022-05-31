@@ -1,2 +1,22 @@
 .section {
+  &__header {
+    margin-bottom: 45px;
+  }
+
+  &__title,
+  &__subtitle {
+    line-height: $line-height--secondary;
+  }
+
+  &__title {
+    color: $color-text__gray;
+    font-size: $font-size__title--medium;
+  }
+
+  &__subtitle {
+    color: $color-text__cyan;
+
+    font-weight: $weight-Regular;
+    font-size: $font-size__title--small;
+  }
 }
