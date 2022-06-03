@@ -1,2 +1,59 @@
-.slider {
+.swiper {
+  &-button {
+    &-prev,
+    &-next {
+      top: initial;
+      bottom: 0;
+
+      width: 45px;
+      height: 45px;
+
+      margin-top: 0;
+
+      @media (hover: hover) {
+        &:hover {
+          rect {
+            fill: $palette-cyan;
+            stroke: $palette-cyan;
+          }
+
+          path {
+            fill: $palette-white;
+          }
+        }
+      }
+
+      rect {
+        stroke: $palette-cyan;
+      }
+
+      path {
+        fill: $palette-cyan;
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+
+    &-prev {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+
+    &-disabled {
+      opacity: 1 !important;
+
+      rect {
+        stroke: #cbcbcb;
+      }
+
+      path {
+        fill: #cbcbcb;
+      }
+    }
+  }
 }

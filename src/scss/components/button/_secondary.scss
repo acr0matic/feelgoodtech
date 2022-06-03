@@ -1,20 +1,18 @@
 .button-secondary {
-  padding: 7px 0;
+  padding: 12px 0;
   color: $color-text__white;
 
   font-weight: $weight-Bold;
   font-size: $font-size__text--largest + 2px;
 
-  @media (hover: hover) {
-    &:hover {
-      padding: 7px 15px;
+  &:hover {
+    padding: 12px 15px;
 
-      background-color: $palette-white;
-      color: $color-text__cyan;
+    background-color: $palette-white;
+    color: $color-text__cyan;
 
-      .button__arrow path {
-        fill: $color-text__cyan;
-      }
+    .button__arrow path {
+      fill: $color-text__cyan;
     }
   }
 
@@ -30,14 +28,12 @@
   &--cyan {
     color: $color-text__cyan;
 
-    @media (hover: hover) {
-      &:hover {
-        background-color: $palette-cyan;
-        color: $color-text__white;
+    &:hover {
+      background-color: $palette-cyan;
+      color: $color-text__white;
 
-        .button__arrow path {
-          fill: $color-text__white;
-        }
+      .button__arrow path {
+        fill: $color-text__white;
       }
     }
 
