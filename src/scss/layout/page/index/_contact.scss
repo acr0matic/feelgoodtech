@@ -1,0 +1,45 @@
+section#contact {
+}
+
+.contact {
+  &__email {
+    display: inline-block;
+    margin-bottom: 70px;
+
+    color: $color-text__black;
+
+    font-weight: $weight-Bold;
+    font-size: $font-size__title--small + 12px;
+  }
+
+  &__address {
+    font-size: $font-size__title--small - 4px;
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    color: $color-text__gray;
+    font-size: $font-size__title--small - 4px;
+  }
+
+  &__icon {
+    @media (hover: hover) {
+      &:hover {
+        circle {
+          fill: $palette-white;
+        }
+
+        path {
+          fill: $palette-blue;
+        }
+      }
+    }
+  }
+}
