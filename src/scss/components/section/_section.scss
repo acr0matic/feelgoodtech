@@ -1,5 +1,10 @@
 .section {
   &:not(:first-child) {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-top: 60px;
+      padding-top: 60px;
+    }
+
     margin-top: 100px;
     padding-top: 80px;
   }
@@ -13,6 +18,10 @@
       font-size: $font-size__title--medium - 16px;
     }
 
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $font-size__title--medium;
+    }
+
     color: $color-text__gray;
     font-size: $font-size__title--medium;
     line-height: $line-height--secondary;
@@ -21,6 +30,10 @@
   &__subtitle {
     @include breakpoint($breakpoint-laptop) {
       font-size: $font-size__title--small - 8px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $font-size__title--small;
     }
 
     color: $color-text__cyan;

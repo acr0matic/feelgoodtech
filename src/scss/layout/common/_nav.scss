@@ -9,6 +9,10 @@
   }
 
   &__item {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-right: 30px;
+    }
+
     margin-right: 60px;
   }
 

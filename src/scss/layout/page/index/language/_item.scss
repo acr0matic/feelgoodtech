@@ -48,6 +48,10 @@
   }
 
   &__count {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 30px;
+    }
+
     position: relative;
     margin-bottom: 50px;
     font-size: $font-size__text--regular;
@@ -67,11 +71,19 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 25px;
+    }
+
     margin-bottom: 45px;
     font-size: $font-size__text--largest;
   }
 
   &__description {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 25px;
+    }
+
     margin-bottom: 45px;
     font-size: $font-size__text--regular;
   }

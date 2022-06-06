@@ -1,8 +1,19 @@
 section#language {
   overflow: hidden;
+
+  .section__header {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .language {
+  @include breakpoint($breakpoint-tablet--large) {
+    position: relative;
+    padding-bottom: 80px;
+  }
+
   .col-3 {
     position: relative;
     z-index: 5;
@@ -50,6 +61,14 @@ section#language {
   }
 
   &__control {
+    @include breakpoint($breakpoint-tablet--large) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+    }
+
     position: relative;
     margin-top: auto;
   }

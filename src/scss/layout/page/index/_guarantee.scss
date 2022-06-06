@@ -1,8 +1,11 @@
 section#guarantee {
+  @include breakpoint($breakpoint-tablet--large) {
+    margin-top: 30px;
+  }
+
   margin-top: 90px;
   padding-top: 0;
 }
 
 .guarantee {
-
 }

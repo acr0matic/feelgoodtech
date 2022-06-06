@@ -1,8 +1,40 @@
 .language__slider {
+  @include breakpoint($breakpoint-tablet--large) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+
+      display: block;
+      width: 400px;
+      height: 100%;
+
+      background-color: $palette-cyan;
+    }
+
+    &::before {
+      left: 100%;
+    }
+
+    &::after {
+      right: 100%;
+    }
+  }
+
   overflow: initial;
 
   .swiper-slide {
-    width: 280px;
+    @include breakpoint($breakpoint-tablet--large) {
+      @include even {
+        .language-item {
+          background-color: #1ab099;
+        }
+      }
+    }
+
+    width: 300px;
     height: initial;
   }
 }

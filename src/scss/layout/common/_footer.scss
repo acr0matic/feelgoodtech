@@ -3,6 +3,11 @@
 // -----------------------------------------------------------------------------
 
 #footer {
+  @include breakpoint($breakpoint-tablet--large) {
+    margin-top: 80px;
+  }
+
+  margin-top: 180px;
   background-color: $palette-cyan;
 }
 
@@ -11,6 +16,5 @@
   align-items: center;
   justify-content: center;
 
-  margin-top: 180px;
   padding: 20px 0;
 }

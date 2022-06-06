@@ -1,4 +1,9 @@
 #service {
+  @include breakpoint($breakpoint-tablet--large) {
+    margin-top: 30px;
+    padding-top: 60px;
+  }
+
   margin-top: 100px;
   padding-top: 80px;
 }
@@ -7,6 +12,10 @@
   &__card {
     @include breakpoint($breakpoint-laptop) {
       height: 180px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      height: 205px;
     }
 
     position: relative;
@@ -81,6 +90,10 @@
   &__title {
     @include breakpoint($breakpoint-laptop) {
       font-size: $font-size__text--big;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $font-size__text--largest;
     }
 
     font-size: $font-size__text--largest;

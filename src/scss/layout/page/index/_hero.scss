@@ -3,6 +3,11 @@ section#hero {
     max-height: 420px;
   }
 
+  @include breakpoint($breakpoint-tablet--large) {
+    max-height: 450px;
+    padding-bottom: 30px;
+  }
+
   display: flex;
   align-items: center;
   height: calc(100vh - ($header-height + 90px));
@@ -14,6 +19,12 @@ section#hero {
   &__title {
     @include breakpoint($breakpoint-laptop) {
       font-size: $font-size__title--medium + 10px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      br {
+        display: none;
+      }
     }
 
     font-weight: $weight-Regular;
@@ -40,6 +51,12 @@ section#hero {
           right: 0;
         }
 
+        @include breakpoint($breakpoint-tablet--large) {
+          top: initial;
+          right: 60px;
+          bottom: 15px;
+        }
+
         top: 50%;
         right: 55px;
       }
@@ -50,6 +67,12 @@ section#hero {
           bottom: 15px;
         }
 
+        @include breakpoint($breakpoint-tablet--large) {
+          right: initial;
+          bottom: -80px;
+          left: -10px;
+        }
+
         right: 500px;
         bottom: 25px;
       }
@@ -58,6 +81,11 @@ section#hero {
         @include breakpoint($breakpoint-laptop) {
           right: 0;
           bottom: 15px;
+        }
+
+        @include breakpoint($breakpoint-tablet--large) {
+          right: 60px;
+          bottom: -80px;
         }
 
         right: 55px;
