@@ -45,4 +45,29 @@
       background-color: $color-text__cyan;
     }
   }
+
+  &--black {
+    color: $color-text__black;
+
+    &:hover {
+      background-color: $palette-cyan;
+      color: $color-text__white;
+
+      .button__arrow path {
+        fill: $color-text__white;
+      }
+
+      &::after {
+        background-color: $color-text__cyan;
+      }
+    }
+
+    .button__arrow path {
+      fill: $color-text__black;
+    }
+
+    &::after {
+      background-color: $color-text__black;
+    }
+  }
 }

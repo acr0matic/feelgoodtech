@@ -87,7 +87,7 @@
         <!-- /.header__nav -->
 
         <div class="header__action">
-          <button class="button button-primary">
+          <button data-micromodal-trigger="modal-callback" class="button button-primary">
             <span class="button__text">Write Us</span>
             <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
@@ -938,10 +938,85 @@
     <!-- /.container -->
   </footer>
 
+  <div class="modal modal-callback micromodal-slide" id="modal-callback" aria-hidden="true">
+    <div class="modal__overlay" data-micromodal-close>
+      <div class="modal__container" role="dialog">
+        <header class="modal__header">
+          <h2 class="modal__title">
+            Fill in the form and we will contact
+            <br>
+            you as soon as possible
+          </h2>
+
+          <svg class="modal__close" data-micromodal-close viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path data-micromodal-close d="M2 2L34 33M34 2L2 33" stroke="white" stroke-width="4" />
+          </svg>
+        </header>
+
+        <main class="modal__content">
+          <div class="modal__wrapper">
+            <form novalidate action="php/mail.php" class="modal__form form form-callback" data-target="callback">
+              <div class="input">
+                <input required data-required placeholder="Your Name / Company Name " autocomplete="off" type="text" name="user_name" class="input__field input__field--modal input__field--required">
+                <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+              </div>
+              <!-- /.input -->
+
+              <div class="input">
+                <input required data-required placeholder="E-mail" autocomplete="off" type="email" name="user_email" class="input__field input__field--modal">
+                <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+              </div>
+              <!-- /.input -->
+
+              <div class="input">
+                <input required data-required placeholder="Subject" autocomplete="off" type="text" name="user_subject" class="input__field input__field--modal">
+                <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+              </div>
+              <!-- /.input -->
+
+              <div class="input">
+                <input placeholder="Phone" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--modal input__field--required">
+              </div>
+              <!-- /.input -->
+
+              <div class="input">
+                <input placeholder="Skype ID" autocomplete="off" type="text" name="user_sjype" class="input__field input__field--modal input__field--required">
+              </div>
+              <!-- /.input -->
+
+              <div class="input">
+                <input required data-required placeholder="Message" autocomplete="off" type="text" name="user_message" class="input__field input__field--modal input__field--required">
+                <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+              </div>
+              <!-- /.input -->
+
+              <div class="form__action">
+                <button data-sending="Sending..." type="submit" class="button button-secondary button-secondary--black">
+                  <span class="button__text">Send</span>
+                  <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
+                  </svg>
+                </button>
+              </div>
+              <!-- /.form__action -->
+            </form>
+          </div>
+          <!-- /.modal__wrapper -->
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal -->
+
   <!-- Скрипты -->
   <!-- build:js js/script.min.js -->
   <script src="scripts/libraries/smoothScroll.js"></script>
   <script src="scripts/libraries/swiper-bundle.min.js"></script>
+  <script src="scripts/libraries/micromodal.js"></script>
+  <script src="scripts/libraries/imask.js"></script>
+  <script src="scripts/libraries/popper.js"></script>
+  <script src="scripts/libraries/tippy.js"></script>
+  <script src="scripts/libraries/forms.js"></script>
 
   <script src="scripts/base.js"></script>
   <script src="scripts/init.js"></script>

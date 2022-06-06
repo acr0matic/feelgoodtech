@@ -26,7 +26,6 @@ class Form {
     }
 
     this.Init();
-    this.Mask();
     this.Listener();
   }
 
@@ -48,7 +47,6 @@ class Form {
       prepare: (appended, masked) => ((appended === '8' && masked.value === '') ? '' : appended),
     });
 
-    // Маска для даты
     if (this.date) {
       IMask(this.date, {
         mask: Date,
@@ -113,7 +111,10 @@ class Form {
       }
     }
 
-    input_phone.forEach(input => Validate(input, 'phone'));
+    input_phone.forEach(input => {
+      if (input.hasAttribute('data-required')) Validate(input, 'phone')
+    });
+
     input_name.forEach(input => {
       if (input.hasAttribute('data-required')) Validate(input, 'name')
       else if (input.value !== '') Validate(input, 'name')

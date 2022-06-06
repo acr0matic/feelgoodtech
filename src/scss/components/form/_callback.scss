@@ -1,0 +1,11 @@
+.form-callback {
+  .input {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form__action {
+    margin-top: 60px;
+  }
+}

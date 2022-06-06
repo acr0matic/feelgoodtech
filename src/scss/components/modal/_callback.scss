@@ -1,0 +1,24 @@
+.modal-callback {
+  .modal__overlay {
+    overflow: auto;
+    padding-bottom: 40px;
+  }
+
+  .modal__container {
+    max-width: 760px;
+    padding-bottom: 45px;
+  }
+
+  .modal__header {
+    padding: 75px 0 50px;
+
+    background-color: $palette-cyan;
+    color: $color-text__white;
+    text-align: center;
+  }
+
+  .modal__form {
+    max-width: 475px;
+    margin: 40px auto 0;
+  }
+}
