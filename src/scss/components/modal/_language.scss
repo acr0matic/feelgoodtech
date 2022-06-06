@@ -1,0 +1,28 @@
+.modal-language {
+  .modal__container {
+    max-width: 1080px;
+    padding: 70px 50px;
+  }
+
+  .modal__close path {
+    stroke: $palette-black;
+  }
+
+  .modal__heading {
+    margin-bottom: 30px;
+    color: $color-text__cyan;
+
+    font-weight: $weight-Bold;
+    font-size: $font-size__title--small;
+  }
+
+  .modal__list {
+    li {
+      font-size: $font-size__text--large;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
