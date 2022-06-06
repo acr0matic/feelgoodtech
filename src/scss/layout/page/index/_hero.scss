@@ -1,0 +1,45 @@
+section#hero {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - ($header-height + 90px));
+}
+
+.hero {
+  position: relative;
+
+  &__title {
+    font-weight: $weight-Regular;
+    font-size: $font-size__title--large;
+
+    line-height: $line-height--secondary;
+
+    span {
+      color: $color-text__cyan;
+      font-weight: $weight-Bold;
+    }
+  }
+
+  &__action {
+    .button {
+      position: absolute;
+
+      font-weight: $weight-Bold;
+      font-size: $font-size__text--largest + 2px;
+
+      &:first-child {
+        top: 50%;
+        right: 55px;
+      }
+
+      &:nth-child(2) {
+        right: 500px;
+        bottom: 25px;
+      }
+
+      &:nth-child(3) {
+        right: 55px;
+        bottom: 25px;
+      }
+    }
+  }
+}
