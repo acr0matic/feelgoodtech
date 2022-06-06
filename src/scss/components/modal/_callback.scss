@@ -1,6 +1,15 @@
 .modal-callback {
-  .modal__container {
+  .modal__overlay {
+    overflow: auto;
+  }
+
+  .modal__overflow {
+    width: 100%;
     max-width: 760px;
+    height: 95%;
+  }
+
+  .modal__container {
     padding-bottom: 45px;
   }
 

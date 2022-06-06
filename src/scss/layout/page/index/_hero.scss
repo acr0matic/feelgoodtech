@@ -1,4 +1,8 @@
 section#hero {
+  @include breakpoint($breakpoint-laptop) {
+    max-height: 420px;
+  }
+
   display: flex;
   align-items: center;
   height: calc(100vh - ($header-height + 90px));
@@ -8,6 +12,10 @@ section#hero {
   position: relative;
 
   &__title {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size__title--medium + 10px;
+    }
+
     font-weight: $weight-Regular;
     font-size: $font-size__title--large;
 
@@ -27,16 +35,31 @@ section#hero {
       font-size: $font-size__text--largest + 2px;
 
       &:first-child {
+        @include breakpoint($breakpoint-laptop) {
+          top: 43%;
+          right: 0;
+        }
+
         top: 50%;
         right: 55px;
       }
 
       &:nth-child(2) {
+        @include breakpoint($breakpoint-laptop) {
+          right: 420px;
+          bottom: 15px;
+        }
+
         right: 500px;
         bottom: 25px;
       }
 
       &:nth-child(3) {
+        @include breakpoint($breakpoint-laptop) {
+          right: 0;
+          bottom: 15px;
+        }
+
         right: 55px;
         bottom: 25px;
       }

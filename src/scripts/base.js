@@ -1,3 +1,5 @@
+const isTablet = window.matchMedia('(max-width: 992px)').matches;
+
 const StyleСlass = {
   'mobile': {
     'open': 'mobile-menu--open',

@@ -9,12 +9,20 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size__title--medium - 16px;
+    }
+
     color: $color-text__gray;
     font-size: $font-size__title--medium;
     line-height: $line-height--secondary;
   }
 
   &__subtitle {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size__title--small - 8px;
+    }
+
     color: $color-text__cyan;
 
     font-weight: $weight-Regular;

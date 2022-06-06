@@ -1,10 +1,23 @@
 .textblock {
   &__content {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size__text--big;
+    }
+
     font-size: $font-size__text--large;
 
     &:not(:last-child) {
+      @include breakpoint($breakpoint-laptop) {
+        margin-bottom: 45px;
+      }
+
       margin-bottom: 65px;
     }
+  }
+
+  &__picture {
+    position: sticky;
+    top: $header-height + 15px;
   }
 
   &__title {
@@ -21,5 +34,19 @@
 
   &__action {
     margin-top: auto;
+
+    &--mobile {
+      @include breakpoint($breakpoint-laptop) {
+        display: block;
+      }
+
+      display: none;
+    }
+
+    &--laptop {
+      @include breakpoint($breakpoint-laptop) {
+        display: none;
+      }
+    }
   }
 }

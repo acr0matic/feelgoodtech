@@ -1,4 +1,8 @@
 #about {
+  @include breakpoint($breakpoint-laptop) {
+    margin-top: 30px;
+  }
+
   padding: 90px 0;
   background-color: $palette-gray;
 }
