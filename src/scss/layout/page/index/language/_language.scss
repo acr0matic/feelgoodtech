@@ -7,6 +7,20 @@ section#language {
     z-index: 5;
 
     background-color: $palette-white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -12px;
+
+      display: block;
+      width: 12px;
+      height: 100%;
+
+      background-color: $palette-white;
+    }
   }
 
   &__wrapper {
