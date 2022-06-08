@@ -70,15 +70,19 @@
               </li>
 
               <li class="nav__item">
-                <a class="nav__link" href="#service">Services</a>
+                <a class="nav__link" href="#language">Language services</a>
               </li>
 
               <li class="nav__item">
-                <a class="nav__link" href="#contact">Contacts</a>
+                <a class="nav__link" href="#service">AI and ML Training Services</a>
               </li>
 
               <li class="nav__item">
                 <a class="nav__link" href="#job">Jobs</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#contact">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -917,6 +921,35 @@
       <!-- /.container -->
     </section>
 
+    <section id="job" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Jobs</h2>
+          <h3 class="section__subtitle">
+            Join our team and help to create anything from
+            <br>
+            translating to improving AI systems
+          </h3>
+        </div>
+        <!-- /.section__header -->
+
+        <div class="job contact">
+          <a class="job__email contact__email link" href="mailto:feelgoodtechjobs@gmail.com">feelgoodtechjobs@gmail.com</a>
+          <div class="contact__action">
+            <button data-micromodal-trigger="modal-jobs" class="button button-secondary button-secondary--cyan">
+              <span class="button__text">Let's work together</span>
+              <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
+              </svg>
+            </button>
+          </div>
+          <!-- /.contact__action -->
+        </div>
+        <!-- /.contact -->
+      </div>
+      <!-- /.container -->
+    </section>
+
     <section id="contact" class="section">
       <div class="container">
         <div class="section__header">
@@ -930,7 +963,7 @@
           <div class="contact__row">
             <h4 class="contact__title">or contact us via Messengers</h4>
             <div class="contact__wrapper">
-              <a class="me-4" href="">
+              <a class="me-4" href="" target="_blank">
                 <svg class="contact__icon svg" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="31.375" cy="31.375" r="31.375" fill="#00A78E" />
                   <path
@@ -942,7 +975,7 @@
                 </svg>
               </a>
 
-              <a href="">
+              <a href="" target="_blank">
                 <svg class="contact__icon svg" class="svg" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="31.5" cy="31.5" r="31.5" fill="#00A78E" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -961,7 +994,7 @@
           <div class="contact__row">
             <h4 class="contact__title">Address</h4>
             <div class="contact__wrapper">
-              <a class="contact__address link" href="">
+              <a class="contact__address link" href="https://goo.gl/maps/jKHd4MBE3hNsQPb4A" target="_blank">
                 220062, Pobediteley 141, p.3.
                 <br>
                 Minsk, Republic of Belarus
@@ -970,35 +1003,6 @@
             <!-- /.contact__wrapper -->
           </div>
           <!-- /.contact__row -->
-        </div>
-        <!-- /.contact -->
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <section id="job" class="section">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title">Jobs</h2>
-          <h3 class="section__subtitle">
-            Feel free to join our team to work
-            <br>
-            on various projects in the future
-          </h3>
-        </div>
-        <!-- /.section__header -->
-
-        <div class="job contact">
-          <a class="job__email contact__email link" href="mailto:feelgoodtechinfo@gmail.com">feelgoodtechinfo@gmail.com</a>
-          <div class="contact__action">
-            <button data-micromodal-trigger="modal-callback" class="button button-secondary button-secondary--cyan">
-              <span class="button__text">Let's work together</span>
-              <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
-              </svg>
-            </button>
-          </div>
-          <!-- /.contact__action -->
         </div>
         <!-- /.contact -->
       </div>
@@ -1059,12 +1063,80 @@
                 <!-- /.input -->
 
                 <div class="input">
-                  <input placeholder="Phone" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--modal input__field--required">
+                  <input placeholder="Phone Number" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--modal input__field--required">
                 </div>
                 <!-- /.input -->
 
                 <div class="input">
                   <input placeholder="Skype ID" autocomplete="off" type="text" name="user_sjype" class="input__field input__field--modal input__field--required">
+                </div>
+                <!-- /.input -->
+
+                <div class="input">
+                  <input required data-required placeholder="Message" autocomplete="off" type="text" name="user_message" class="input__field input__field--modal input__field--required">
+                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                </div>
+                <!-- /.input -->
+
+                <div class="form__action">
+                  <button data-sending="Sending..." type="submit" class="button button-secondary button-secondary--black">
+                    <span class="button__text">Send</span>
+                    <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.form__action -->
+              </form>
+            </div>
+            <!-- /.modal__wrapper -->
+          </main>
+        </div>
+      </div>
+      <!-- /.modal__overflow -->
+    </div>
+  </div>
+  <!-- /.modal -->
+
+  <div class="modal modal-callback micromodal-slide" id="modal-jobs" aria-hidden="true">
+    <div class="modal__overlay" data-micromodal-close>
+      <div class="modal__overflow">
+        <div class="modal__container" role="dialog">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              Be a part of our community to make
+              <br>
+              the future real
+            </h2>
+
+            <svg class="modal__close" data-micromodal-close viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path data-micromodal-close d="M2 2L34 33M34 2L2 33" stroke="white" stroke-width="4" />
+            </svg>
+          </header>
+
+          <main class="modal__content">
+            <div class="modal__wrapper">
+              <form novalidate action="php/mail.php" class="modal__form form form-callback" data-target="callback">
+                <div class="input">
+                  <input required data-required placeholder="Name, Surname" autocomplete="off" type="text" name="user_name" class="input__field input__field--modal input__field--required">
+                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                </div>
+                <!-- /.input -->
+
+                <div class="input">
+                  <input required data-required placeholder="E-mail" autocomplete="off" type="email" name="user_email" class="input__field input__field--modal">
+                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                </div>
+                <!-- /.input -->
+
+                <div class="input">
+                  <input required data-required placeholder="Language pairs" autocomplete="off" type="text" name="user_language" class="input__field input__field--modal">
+                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                </div>
+                <!-- /.input -->
+
+                <div class="input">
+                  <input placeholder="Phone Number" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--modal input__field--required">
                 </div>
                 <!-- /.input -->
 

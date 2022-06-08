@@ -1,8 +1,10 @@
 .button-primary {
-  padding: 7px 15px;
+  padding: 7px 0;
 
   @media (hover: hover) {
     &:hover {
+      padding: 7px 15px;
+
       background-color: $component-color__blue;
       color: $color-text__white;
 

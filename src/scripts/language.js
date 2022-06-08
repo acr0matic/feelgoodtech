@@ -3,7 +3,7 @@ const language = document.getElementById('language');
 if (language) {
   new Swiper('.language__slider', {
     slidesPerView: 'auto',
-    simulateTouch: false,
+    grabCursor: true,
 
     mousewheel: {
       invert: false,

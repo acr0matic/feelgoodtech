@@ -20,4 +20,11 @@ section#experience {
       }
     }
   }
+
+  .section__header {
+    position: sticky;
+    top: 70px;
+
+    padding-bottom: 32px;
+  }
 }

@@ -38,6 +38,8 @@ section#contact {
   }
 
   &__icon {
+    filter: drop-shadow(0 0 11px rgba(#c8c8c8, 0.4));
+
     @media (hover: hover) {
       &:hover {
         circle {
