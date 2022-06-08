@@ -1,4 +1,10 @@
 section#experience {
+  @include breakpoint($breakpoint-tablet--large) {
+    .textblock__action--mobile {
+      margin-top: 30px;
+    }
+  }
+
   @include breakpoint($breakpoint-mobile--large) {
     .textblock__content {
       br {
@@ -22,6 +28,10 @@ section#experience {
   }
 
   .section__header {
+    @include breakpoint($breakpoint-tablet--large) {
+      padding-bottom: 0;
+    }
+
     position: sticky;
     top: 70px;
 

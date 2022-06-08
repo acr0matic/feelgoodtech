@@ -10,16 +10,16 @@
   }
 
   &__header {
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 30px;
+    }
+
     margin-bottom: 45px;
   }
 
   &__title {
     @include breakpoint($breakpoint-laptop) {
       font-size: $font-size__title--medium - 16px;
-    }
-
-    @include breakpoint($breakpoint-tablet--large) {
-      font-size: $font-size__title--medium;
     }
 
     @include breakpoint($breakpoint-mobile--large) {
@@ -36,12 +36,12 @@
       font-size: $font-size__title--small - 8px;
     }
 
-    @include breakpoint($breakpoint-tablet--large) {
-      font-size: $font-size__title--small;
-    }
-
     @include breakpoint($breakpoint-mobile--large) {
       font-size: $font-size__text--large;
+
+      br {
+        display: none;
+      }
     }
 
     color: $color-text__cyan;

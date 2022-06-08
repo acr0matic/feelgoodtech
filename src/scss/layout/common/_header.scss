@@ -18,7 +18,7 @@
   height: $header-height;
 
   &__logo {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-right: auto;
       margin-left: 0;
     }
@@ -27,17 +27,32 @@
   }
 
   &__nav {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       display: none;
     }
   }
 
   &__action {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       display: none;
     }
 
-    margin-left: -15px;
+    .button {
+      @include breakpoint($breakpoint-laptop) {
+        font-size: $font-size__text--regular;
+      }
+
+      @include breakpoint($breakpoint-tablet--large) {
+        font-size: $font-size__text--small;
+      }
+
+      &__arrow {
+        @include breakpoint($breakpoint-tablet--large) {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
   }
 
   &__mobile {

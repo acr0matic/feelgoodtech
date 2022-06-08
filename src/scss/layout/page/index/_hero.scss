@@ -67,8 +67,6 @@ section#hero {
         left: 0 !important;
 
         justify-content: space-between;
-        padding-right: 0;
-        padding-left: 0;
 
         font-size: $font-size__text--big;
 
@@ -111,7 +109,7 @@ section#hero {
         @include breakpoint($breakpoint-tablet--large) {
           right: initial;
           bottom: -80px;
-          left: -10px;
+          left: 10px;
         }
 
         right: 500px;

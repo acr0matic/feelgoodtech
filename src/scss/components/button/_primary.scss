@@ -1,20 +1,18 @@
 .button-primary {
   padding: 7px 0;
 
-  @media (hover: hover) {
-    &:hover {
-      padding: 7px 15px;
+  &:hover {
+    padding: 7px 15px;
 
+    background-color: $component-color__blue;
+    color: $color-text__white;
+
+    &::after {
       background-color: $component-color__blue;
-      color: $color-text__white;
+    }
 
-      &::after {
-        background-color: $component-color__blue;
-      }
-
-      .button__arrow path {
-        fill: $color-text__white;
-      }
+    .button__arrow path {
+      fill: $color-text__white;
     }
   }
 }

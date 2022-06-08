@@ -17,6 +17,10 @@ $transition-time: 0.2s;
   }
 
   &__container {
+    @include breakpoint($breakpoint-mobile--large) {
+      width: 95%;
+    }
+
     position: relative;
     width: 100%;
 

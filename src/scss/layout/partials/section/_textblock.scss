@@ -4,7 +4,7 @@
       font-size: $font-size__text--big;
     }
 
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet--large) {
       font-size: $font-size__text--regular;
     }
 
@@ -13,6 +13,10 @@
     &:not(:last-child) {
       @include breakpoint($breakpoint-laptop) {
         margin-bottom: 45px;
+      }
+
+      @include breakpoint($breakpoint-tablet--large) {
+        margin-bottom: 30px;
       }
 
       margin-bottom: 65px;
@@ -25,6 +29,10 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $font-size__title--small + 6px;
+    }
+
     @include breakpoint($breakpoint-mobile--large) {
       font-size: 36px;
     }
@@ -35,6 +43,10 @@
     font-size: 69px;
 
     &--small {
+      @include breakpoint($breakpoint-tablet--large) {
+        font-size: $font-size__title--small - 4px;
+      }
+
       @include breakpoint($breakpoint-mobile--large) {
         font-size: 25px;
       }

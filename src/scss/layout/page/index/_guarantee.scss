@@ -1,6 +1,10 @@
 section#guarantee {
   @include breakpoint($breakpoint-tablet--large) {
     margin-top: 30px;
+
+    .textblock__action--mobile {
+      margin-top: 30px;
+    }
   }
 
   @include breakpoint($breakpoint-mobile--large) {
@@ -25,6 +29,10 @@ section#guarantee {
 
 .guarantee {
   .section__header {
+    @include breakpoint($breakpoint-tablet--large) {
+      padding-bottom: 0;
+    }
+
     position: sticky;
     top: 70px;
 

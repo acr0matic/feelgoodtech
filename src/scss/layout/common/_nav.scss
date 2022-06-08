@@ -9,8 +9,14 @@
   }
 
   &__item {
-    @include breakpoint($breakpoint-tablet--large) {
+    @include breakpoint($breakpoint-laptop) {
       margin-right: 30px;
+      font-size: $font-size__text--regular;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-right: 20px;
+      font-size: $font-size__text--small;
     }
 
     margin-right: 60px;

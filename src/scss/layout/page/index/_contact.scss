@@ -7,6 +7,14 @@ section#contact {
       margin-bottom: 45px;
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--largest + 4px;
+    }
+
+    @include breakpoint($breakpoint-mobile--medium) {
+      font-size: $font-size__text--largest + 2px;
+    }
+
     display: inline-block;
     margin-bottom: 70px;
 
@@ -17,6 +25,10 @@ section#contact {
   }
 
   &__address {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--largest + 2px;
+    }
+
     font-size: $font-size__title--small - 4px;
   }
 
@@ -31,6 +43,11 @@ section#contact {
   }
 
   &__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-bottom: 12px;
+      font-size: $font-size__text--large;
+    }
+
     margin-bottom: 25px;
 
     color: $color-text__gray;

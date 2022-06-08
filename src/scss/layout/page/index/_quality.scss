@@ -1,4 +1,8 @@
 #quality {
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 45px 0;
+  }
+
   padding: 90px 0;
   background-color: $palette-gray;
 }
