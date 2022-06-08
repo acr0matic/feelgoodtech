@@ -24,4 +24,4 @@ const tooltip = tippy('[data-tippy-content]', {
   theme: 'flat',
 });
 
-if (isTablet) _.forEach(tooltip, (item) => item.props.placement = 'bottom');
+if (isTablet) tooltip.forEach((item) => item.props.placement = 'bottom');

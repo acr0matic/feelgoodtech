@@ -15,7 +15,10 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 const scrollParams = {
   speed: 500,
   speedAsDuration: true,
+  offset: 0,
 }
+
+if (isTablet) scrollParams.offset = 30;
 
 const modalParams = {
   awaitCloseAnimation: true,

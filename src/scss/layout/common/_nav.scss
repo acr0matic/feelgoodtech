@@ -8,27 +8,47 @@
     align-items: center;
   }
 
-  &__item {
-    @include breakpoint($breakpoint-laptop) {
-      margin-right: 30px;
-      font-size: $font-size__text--regular;
-    }
+  &--header {
+    .nav {
+      &__item {
+        @include breakpoint($breakpoint-laptop) {
+          margin-right: 30px;
+          font-size: $font-size__text--regular;
+        }
 
-    @include breakpoint($breakpoint-tablet--large) {
-      margin-right: 20px;
-      font-size: $font-size__text--small;
-    }
+        @include breakpoint($breakpoint-tablet--large) {
+          margin-right: 20px;
+          font-size: $font-size__text--small;
+        }
 
-    margin-right: 60px;
+        margin-right: 60px;
+      }
+
+      &__link {
+        padding: 10px 0;
+        transition: $transition ease;
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-text__cyan;
+          }
+        }
+      }
+    }
   }
 
-  &__link {
-    padding: 10px 0;
-    transition: $transition ease;
+  &--mobile {
+    .nav {
+      &__list {
+        flex-direction: column;
+      }
 
-    @media (hover: hover) {
-      &:hover {
-        color: $color-text__cyan;
+      &__item {
+        margin-bottom: 25px;
+      }
+
+      &__link {
+        font-weight: $weight-Medium;
       }
     }
   }
