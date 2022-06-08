@@ -1,11 +1,13 @@
-section#guarantee {
-  @include breakpoint($breakpoint-tablet--large) {
-    margin-top: 30px;
-  }
-
+section#experience {
   @include breakpoint($breakpoint-mobile--large) {
+    .textblock__content {
+      br {
+        display: none;
+      }
+    }
+
     .textblock__action--mobile {
-      margin-top: 60px;
+      margin-top: 40px;
 
       .button {
         justify-content: space-between;
@@ -18,10 +20,4 @@ section#guarantee {
       }
     }
   }
-
-  margin-top: 90px;
-  padding-top: 0;
-}
-
-.guarantee {
 }

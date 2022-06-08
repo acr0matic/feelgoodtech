@@ -5,14 +5,16 @@
   font-weight: $weight-Bold;
   font-size: $font-size__text--largest + 2px;
 
-  &:hover {
-    padding: 12px 15px;
+  @media (hover: hover) {
+    &:hover {
+      padding: 12px 15px;
 
-    background-color: $palette-white;
-    color: $color-text__cyan;
+      background-color: $palette-white;
+      color: $color-text__cyan;
 
-    .button__arrow path {
-      fill: $color-text__cyan;
+      .button__arrow path {
+        fill: $color-text__cyan;
+      }
     }
   }
 
@@ -49,16 +51,18 @@
   &--black {
     color: $color-text__black;
 
-    &:hover {
-      background-color: $palette-cyan;
-      color: $color-text__white;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $palette-cyan;
+        color: $color-text__white;
 
-      .button__arrow path {
-        fill: $color-text__white;
-      }
+        .button__arrow path {
+          fill: $color-text__white;
+        }
 
-      &::after {
-        background-color: $color-text__cyan;
+        &::after {
+          background-color: $color-text__cyan;
+        }
       }
     }
 

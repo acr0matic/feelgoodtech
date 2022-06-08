@@ -22,6 +22,10 @@
       font-size: $font-size__title--medium;
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__title--small - 4px;
+    }
+
     color: $color-text__gray;
     font-size: $font-size__title--medium;
     line-height: $line-height--secondary;
@@ -34,6 +38,10 @@
 
     @include breakpoint($breakpoint-tablet--large) {
       font-size: $font-size__title--small;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large;
     }
 
     color: $color-text__cyan;

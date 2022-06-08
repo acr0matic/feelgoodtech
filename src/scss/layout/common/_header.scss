@@ -18,10 +18,33 @@
   height: $header-height;
 
   &__logo {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
     margin-left: auto;
   }
 
+  &__nav {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: none;
+    }
+  }
+
   &__action {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: none;
+    }
+
     margin-left: -15px;
+  }
+
+  &__mobile {
+    @include breakpoint($breakpoint-tablet) {
+      display: block;
+    }
+
+    display: none;
   }
 }

@@ -8,6 +8,13 @@ section#hero {
     padding-bottom: 30px;
   }
 
+  @include breakpoint($breakpoint-mobile--large) {
+    height: initial;
+    max-height: initial;
+
+    padding-top: 65px;
+  }
+
   display: flex;
   align-items: center;
   height: calc(100vh - ($header-height + 90px));
@@ -27,6 +34,14 @@ section#hero {
       }
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 40px;
+    }
+
+    @include breakpoint($breakpoint-mobile--medium) {
+      font-size: 32px;
+    }
+
     font-weight: $weight-Regular;
     font-size: $font-size__title--large;
 
@@ -39,7 +54,33 @@ section#hero {
   }
 
   &__action {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 36px;
+    }
+
     .button {
+      @include breakpoint($breakpoint-mobile--large) {
+        position: relative;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        justify-content: space-between;
+        padding-right: 0;
+        padding-left: 0;
+
+        font-size: $font-size__text--big;
+
+        &::after {
+          width: 100%;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
       position: absolute;
 
       font-weight: $weight-Bold;

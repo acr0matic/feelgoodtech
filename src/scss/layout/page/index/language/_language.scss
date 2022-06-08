@@ -15,12 +15,20 @@ section#language {
   }
 
   .col-lg-3 {
+    @include breakpoint($breakpoint-tablet) {
+      position: static;
+    }
+
     position: relative;
     z-index: 5;
 
     background-color: $palette-white;
 
     &::after {
+      @include breakpoint($breakpoint-tablet) {
+        content: none;
+      }
+
       content: "";
       position: absolute;
       z-index: -1;
@@ -42,6 +50,10 @@ section#language {
     height: 100%;
 
     &::before {
+      @include breakpoint($breakpoint-tablet) {
+        content: none;
+      }
+
       content: "";
       position: absolute;
       z-index: -1;
