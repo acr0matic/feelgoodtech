@@ -26,6 +26,10 @@
   }
 
   &__field {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--regular;
+    }
+
     width: 100%;
 
     padding-bottom: 10px;

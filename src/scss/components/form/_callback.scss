@@ -1,6 +1,10 @@
 .form-callback {
   .input {
     &:not(:last-child) {
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-bottom: 25px;
+      }
+
       margin-bottom: 40px;
     }
   }

@@ -9,6 +9,7 @@
     padding-top: 30px;
   }
 
+  overflow: hidden;
   margin-top: 100px;
   padding-top: 80px;
 }
@@ -16,7 +17,7 @@
 .service {
   @include breakpoint($breakpoint-mobile--large) {
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 
   &__slider {

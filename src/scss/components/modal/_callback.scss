@@ -4,16 +4,31 @@
   }
 
   .modal__overflow {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     width: 100%;
     max-width: 760px;
     height: 95%;
   }
 
   .modal__container {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding-bottom: 25px;
+    }
+
     padding-bottom: 45px;
   }
 
   .modal__header {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 40px 15px 10px;
+      text-align: left;
+    }
+
     padding: 75px 0 50px;
 
     background-color: $palette-cyan;
@@ -21,8 +36,45 @@
     text-align: center;
   }
 
+  .modal__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      width: 90%;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .modal__close {
+    @include breakpoint($breakpoint-mobile--large) {
+      top: 15px;
+      right: 15px;
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .modal__content {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 0 15px;
+    }
+  }
+
   .modal__form {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: flex;
+      flex-direction: column;
+    }
+
     max-width: 475px;
     margin: 40px auto 0;
+  }
+
+  .form__action {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: auto;
+    }
   }
 }

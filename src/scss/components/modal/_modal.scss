@@ -31,6 +31,10 @@ $transition-time: 0.2s;
   }
 
   &__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large + 4px;
+    }
+
     font-size: $font-size__title--small;
   }
 
