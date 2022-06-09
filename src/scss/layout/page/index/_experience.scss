@@ -6,6 +6,8 @@ section#experience {
   }
 
   @include breakpoint($breakpoint-mobile--large) {
+    margin-top: 30px;
+
     .textblock__content {
       br {
         display: none;

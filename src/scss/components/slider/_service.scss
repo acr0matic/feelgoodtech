@@ -1,0 +1,13 @@
+.service__slider {
+  .swiper-slide {
+    @include breakpoint($breakpoint-mobile--large) {
+      @include odd {
+        .service__card {
+          background-color: #1ab099;
+        }
+      }
+
+      width: 80%;
+    }
+  }
+}

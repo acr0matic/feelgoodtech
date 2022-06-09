@@ -1,4 +1,25 @@
 .swiper {
+  &--mobile {
+    @include breakpoint($breakpoint-mobile--large) {
+      flex-wrap: nowrap;
+      overflow: initial;
+    }
+
+    .swiper-wrapper {
+      @include breakpoint($breakpoint-mobile--large) {
+        flex-wrap: nowrap;
+        margin: 0;
+      }
+    }
+
+    .swiper-slide {
+      @include breakpoint($breakpoint-mobile--large) {
+        width: 80%;
+        padding: 0;
+      }
+    }
+  }
+
   &-button {
     &-prev,
     &-next {

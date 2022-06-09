@@ -24,6 +24,10 @@
   }
 
   &__picture {
+    @include breakpoint($breakpoint-mobile--large) {
+      max-width: 420px;
+    }
+
     position: sticky;
     top: $header-height + 15px;
   }

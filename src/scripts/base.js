@@ -1,4 +1,5 @@
 const isTablet = window.matchMedia('(max-width: 992px)').matches;
+const isMobile = window.matchMedia('(max-width: 540px)').matches;
 
 const StyleСlass = {
   'mobile': {

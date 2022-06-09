@@ -4,11 +4,25 @@
     padding-top: 60px;
   }
 
+  @include breakpoint($breakpoint-mobile--large) {
+    margin-top: 15px;
+    padding-top: 30px;
+  }
+
   margin-top: 100px;
   padding-top: 80px;
 }
 
 .service {
+  @include breakpoint($breakpoint-mobile--large) {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  &__slider {
+    position: static;
+  }
+
   &__card {
     @include breakpoint($breakpoint-laptop) {
       height: 180px;
@@ -105,5 +119,13 @@
 
   .button__text {
     font-size: 18px;
+  }
+
+  &__control {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: block;
+    }
+
+    display: none;
   }
 }
