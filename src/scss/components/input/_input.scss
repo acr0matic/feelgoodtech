@@ -3,6 +3,11 @@
 
   &--box {
     .input__label {
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-bottom: 10px;
+        font-size: $font-size__text--regular;
+      }
+
       display: block;
       margin-bottom: 16px;
 
@@ -20,6 +25,10 @@
     }
 
     .input__field {
+      @include breakpoint($breakpoint-mobile--large) {
+        font-size: $font-size__text--regular;
+      }
+
       border: none;
 
       font-weight: $weight-Regular;

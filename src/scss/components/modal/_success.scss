@@ -6,6 +6,10 @@
   }
 
   .modal__content {
+    @include breakpoint($breakpoint-mobile--large) {
+      height: 210px;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,11 +20,19 @@
   }
 
   .modal__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large + 4px;
+    }
+
     margin-bottom: 15px;
     font-size: $font-size__title--small;
   }
 
   .modal__text {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__title--small - 8px;
+    }
+
     font-weight: $weight-Bold;
     font-size: $font-size__title--small + 10px;
   }
