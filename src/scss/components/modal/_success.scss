@@ -1,0 +1,27 @@
+.modal-success {
+  .modal__container {
+    max-width: 760px;
+    background-color: $color-text__cyan;
+    color: $color-text__white;
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 510px;
+
+    text-align: center;
+  }
+
+  .modal__title {
+    margin-bottom: 15px;
+    font-size: $font-size__title--small;
+  }
+
+  .modal__text {
+    font-weight: $weight-Bold;
+    font-size: $font-size__title--small + 10px;
+  }
+}

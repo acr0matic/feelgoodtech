@@ -1,6 +1,39 @@
 .input {
   position: relative;
 
+  &--box {
+    .input__label {
+      display: block;
+      margin-bottom: 16px;
+
+      color: $color-text__gray;
+      font-weight: $weight-Medium;
+      font-size: 24px;
+    }
+
+    .input__wrapper {
+      position: relative;
+      padding: 15px;
+
+      border: 1px solid #e5e5e5;
+      transition: 0.2s ease;
+    }
+
+    .input__field {
+      border: none;
+
+      font-weight: $weight-Regular;
+      font-size: $font-size__text--big;
+
+      resize: none;
+    }
+
+    .input__warning {
+      top: 25px;
+      right: 15px;
+    }
+  }
+
   &--placeholder {
     .input__placeholder {
       opacity: 1;
@@ -9,6 +42,8 @@
   }
 
   &--error {
+    border-color: $input__border--error !important;
+
     .input__field {
       border-bottom-color: $input__border--error;
     }

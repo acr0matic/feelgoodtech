@@ -1036,7 +1036,7 @@
         <div class="job contact">
           <a class="job__email contact__email link" href="mailto:feelgoodtechjobs@gmail.com">feelgoodtechjobs@gmail.com</a>
           <div class="contact__action">
-            <button data-micromodal-trigger="modal-jobs" class="button button-secondary button-secondary--cyan">
+            <button data-micromodal-trigger="modal-job" class="button button-secondary button-secondary--cyan">
               <span class="button__text">Let's work together</span>
               <svg class="button__arrow svg" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 0.65625L12.9995 11.5535H10.7558V4.74997L1.5866 13.6562L0 12.1151L9.55333 2.83571H1.78105V0.65625H13Z" fill="black" />
@@ -1143,9 +1143,9 @@
 
           <main class="modal__content">
             <div class="modal__wrapper">
-              <form novalidate action="php/mail.php" class="modal__form form form-callback" data-target="callback">
+              <form novalidate action="php/form.php" class="modal__form form form-callback" data-target="callback" data-subject="Обратный звонок">
                 <div class="input">
-                  <input required data-required placeholder="Your Name / Company Name " autocomplete="off" type="text" name="user_name" class="input__field input__field--modal input__field--required">
+                  <input required data-required placeholder="Your Name / Company Name" autocomplete="off" type="text" name="user_name" class="input__field input__field--modal input__field--required">
                   <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
                 </div>
                 <!-- /.input -->
@@ -1157,24 +1157,28 @@
                 <!-- /.input -->
 
                 <div class="input">
-                  <input required data-required placeholder="Subject" autocomplete="off" type="text" name="user_subject" class="input__field input__field--modal">
-                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
-                </div>
-                <!-- /.input -->
-
-                <div class="input">
                   <input placeholder="Phone Number" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--modal input__field--required">
                 </div>
                 <!-- /.input -->
 
                 <div class="input">
-                  <input placeholder="Skype ID" autocomplete="off" type="text" name="user_sjype" class="input__field input__field--modal input__field--required">
+                  <input placeholder="Skype ID" autocomplete="off" type="text" name="user_skype" class="input__field input__field--modal input__field--required">
                 </div>
                 <!-- /.input -->
 
                 <div class="input">
-                  <input required data-required placeholder="Message" autocomplete="off" type="text" name="user_message" class="input__field input__field--modal input__field--required">
+                  <input required data-required placeholder="Subject" autocomplete="off" type="text" name="user_subject" class="input__field input__field--modal">
                   <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                </div>
+                <!-- /.input -->
+
+                <div class="input input--box">
+                  <label class="input__label">Message</label>
+                  <div class="input__wrapper">
+                    <textarea data-required rows="4" autocomplete="off" placeholder="Enter the Message" name="user_message" class="input__field"></textarea>
+                    <img data-tippy-content="Not entered or less than 6 character" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                  </div>
+                  <!-- /.input__wrapper -->
                 </div>
                 <!-- /.input -->
 
@@ -1198,7 +1202,7 @@
   </div>
   <!-- /.modal -->
 
-  <div class="modal modal-callback micromodal-slide" id="modal-jobs" aria-hidden="true">
+  <div class="modal modal-callback micromodal-slide" id="modal-job" aria-hidden="true">
     <div class="modal__overlay" data-micromodal-close>
       <div class="modal__overflow">
         <div class="modal__container" role="dialog">
@@ -1216,7 +1220,7 @@
 
           <main class="modal__content">
             <div class="modal__wrapper">
-              <form novalidate action="php/mail.php" class="modal__form form form-callback" data-target="callback">
+              <form novalidate action="php/form.php" class="modal__form form form-callback" data-target="job" data-subject="Совместное сотрудничество">
                 <div class="input">
                   <input required data-required placeholder="Name, Surname" autocomplete="off" type="text" name="user_name" class="input__field input__field--modal input__field--required">
                   <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
@@ -1240,9 +1244,13 @@
                 </div>
                 <!-- /.input -->
 
-                <div class="input">
-                  <input required data-required placeholder="Message" autocomplete="off" type="text" name="user_message" class="input__field input__field--modal input__field--required">
-                  <img data-tippy-content="Not entered or contains errors" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                <div class="input input--box">
+                  <label class="input__label">Message</label>
+                  <div class="input__wrapper">
+                    <textarea data-required rows="4" autocomplete="off" placeholder="Enter the Message" name="user_message" class="input__field"></textarea>
+                    <img data-tippy-content="Not entered or less than 6 character" class="input__warning" src="img/icons/misc/warning.svg" alt="">
+                  </div>
+                  <!-- /.input__wrapper -->
                 </div>
                 <!-- /.input -->
 
@@ -1566,6 +1574,24 @@
             <!-- /.row -->
           </div>
           <!-- /.modal__wrapper -->
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal -->
+
+  <div class="modal modal-success micromodal-slide" id="modal-success" aria-hidden="true">
+    <div class="modal__overlay" data-micromodal-close>
+      <div class="modal__container" role="dialog">
+        <header class="modal__header">
+          <svg class="modal__close" data-micromodal-close viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path data-micromodal-close d="M2 2L34 33M34 2L2 33" stroke="white" stroke-width="4" />
+          </svg>
+        </header>
+
+        <main class="modal__content">
+          <h3 class="modal__title">Thank You!</h3>
+          <p class="modal__text">Data sent successfully</p>
         </main>
       </div>
     </div>

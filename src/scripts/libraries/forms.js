@@ -99,9 +99,9 @@ class Form {
     let isValid = true;
 
     const input_phone = this.form.querySelectorAll('input[type=tel]');
-    const input_name = this.form.querySelectorAll('input[name=user__name], input[name=user_child]')
+    const input_name = this.form.querySelectorAll('input[name=user_name], input[name=user_child]')
     const input_age = this.form.querySelectorAll('input[name=user_age]');
-    const input_email = this.form.querySelectorAll('input[name=user__email]');
+    const input_email = this.form.querySelectorAll('input[name=user_email]');
     const input_message = this.form.querySelectorAll('input[name=user_message]')
 
     const Validate = (field, type) => {
@@ -178,10 +178,6 @@ class Form {
 
         MicroModal.close('modal-callback', modalParams);
         MicroModal.show('modal-success', modalParams);
-
-        setTimeout(() => {
-          MicroModal.close('modal-success', modalParams);
-        }, 3000);
       }
 
       let result = await response.json();
