@@ -1,5 +1,6 @@
 .modal-callback {
   .modal__overlay {
+    align-items: flex-start;
     overflow: auto;
   }
 
@@ -11,8 +12,9 @@
     }
 
     width: 100%;
-    max-width: 760px;
-    height: 95%;
+    max-width: 640px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .modal__container {
@@ -29,7 +31,7 @@
       text-align: left;
     }
 
-    padding: 75px 0 50px;
+    padding: 36px 0;
 
     background-color: $palette-cyan;
     color: $color-text__white;

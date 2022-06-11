@@ -177,6 +177,7 @@ class Form {
         if (this.redirect) window.location.href = this.redirect;
 
         MicroModal.close('modal-callback', modalParams);
+        MicroModal.close('modal-job', modalParams);
         MicroModal.show('modal-success', modalParams);
       }
 
