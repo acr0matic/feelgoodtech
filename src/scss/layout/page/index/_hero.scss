@@ -8,7 +8,7 @@ section#hero {
     padding-bottom: 30px;
   }
 
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     height: initial;
     max-height: initial;
 
@@ -32,6 +32,10 @@ section#hero {
       br {
         display: none;
       }
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 54px;
     }
 
     @include breakpoint($breakpoint-mobile--large) {
@@ -64,6 +68,16 @@ section#hero {
     }
 
     .button {
+      @include breakpoint($breakpoint-tablet) {
+        display: inline-flex;
+        justify-content: space-between;
+        font-size: $font-size__text--big;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
       @include breakpoint($breakpoint-mobile--large) {
         position: relative;
         top: 0 !important;
@@ -71,8 +85,6 @@ section#hero {
         bottom: 0 !important;
         left: 0 !important;
 
-        display: inline-flex;
-        justify-content: space-between;
         margin-bottom: 20px;
 
         font-size: $font-size__text--big;
@@ -107,7 +119,12 @@ section#hero {
           bottom: 15px;
         }
 
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-tablet) {
+          right: 45px;
+          bottom: 10px;
+        }
+
+        @include breakpoint($breakpoint-mobile) {
           order: 1;
         }
 
@@ -127,6 +144,11 @@ section#hero {
           left: 10px;
         }
 
+        @include breakpoint($breakpoint-tablet) {
+          bottom: -60px;
+          left: 0;
+        }
+
         @include breakpoint($breakpoint-mobile--large) {
           order: 3;
         }
@@ -144,6 +166,11 @@ section#hero {
         @include breakpoint($breakpoint-tablet--large) {
           right: 60px;
           bottom: -80px;
+        }
+
+        @include breakpoint($breakpoint-tablet) {
+          right: 45px;
+          bottom: -60px;
         }
 
         @include breakpoint($breakpoint-mobile--large) {
